@@ -56,7 +56,7 @@
 
 <script>
 
-  // even more async: dynamically load chart segment on some ui action
+  // even more async: make available ui action to dynamically load chart segment
 
   function chartAction() {
     Polymer.import(['segments/chart.html']);
@@ -65,6 +65,8 @@
 </script>
 
 <polymer-ui-toolbar>
+
+  <!-- most of this page is the drop down menu in this toolbar -->
 
   <polymer-ui-menu-button icon="menu">
 
@@ -102,14 +104,18 @@
       <polymer-ui-menu-item label="Favorites 2"></polymer-ui-menu-item>
 
       <polymer-ui-submenu-item icon="right" label="More Favorites">
+
         <polymer-ui-menu-item label="More Favorites 1"></polymer-ui-menu-item>
         <polymer-ui-menu-item label="More Favorites 2"></polymer-ui-menu-item>
         <polymer-ui-menu-item label="More Favorites 3"></polymer-ui-menu-item>
+
       </polymer-ui-submenu-item>
 
     </polymer-ui-submenu-item>
 
   </polymer-ui-menu-button>
+
+  <!-- more toolbar items -->
 
   <span flex>Hello World</span>
 
@@ -119,7 +125,11 @@
 
 </polymer-ui-toolbar>
 
+<!-- chart element is inert until the chart segment is loaded -->
+
 <chart-js></chart-js>
+
+<!-- put some social down here -->
 
 <polymer-ui-toolbar style="position: fixed; bottom: 0; left: 0; right: 0;">
 

@@ -3414,11 +3414,12 @@ license that can be found in the LICENSE file.
           this.classList.remove('fullwidth');
         }
       },
-      itemSelectAction: function() {
+      selectedItemChanged: function() {
+        this.opened = this.selectedItem && this.selectedItem.localName === 'polymer-ui-submenu-item';
+      },
+      itemSelectAction: function(event, detail) {
         // TODO(sjmiles): needs to be more flexible
-        if (this.selectedItem.localName !== 'polymer-ui-submenu-item') {
-          this.closeAction();
-        }
+        //this.opened = detail.isSelected && detail.item && detail.item.localName === 'polymer-ui-submenu-item';
       },
       closeAction: function() {
         this.opened = false;
