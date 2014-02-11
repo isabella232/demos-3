@@ -9,7 +9,7 @@ GOTO :EOF
 
 :min
 
-SET CMD=vulcanize %~n1.html --inline  --strip --config vulcan.json -o ../min/%~n1.html
+SET CMD=vulcanize %~n1.html --inline  --xstrip --config vulcan.json -o ../min/%~n1.html
 ECHO %CMD%
 CALL %CMD%
 
